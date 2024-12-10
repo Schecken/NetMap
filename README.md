@@ -2,6 +2,8 @@
 
 Following on from the DigitalRecon project, I thought it would be cool to be able to geographically display networks on a globe. You can use this for pretty much any network you like.
 
+https://github.com/user-attachments/assets/21e8bd18-b1dd-4804-9abd-c58f0ccfc33a
+
 # Usage
 - Get a Mapbox API key and plug it into `script.js`
 - Add network configuration in `network.json` (read note below)
