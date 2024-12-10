@@ -1,0 +1,119 @@
+[
+  {
+    "network_name": "NET1",
+    "job_name": "test",
+    "routing": {
+      "sydney": { "type": "DC", "connections": [] },
+      "melbourne": { "type": "TZ", "connections": [] },
+      "auckland": { "type": "LZ", "connections": [] },
+      "perth": { 
+        "type": "INT", 
+        "connections": {
+          "singapore": { 
+            "type": "FE", 
+            "connections": {
+              "jakarta": { "type": "ER" }, 
+              "manila": { "type": "ER" }
+            }
+          },
+          "brisbane": { 
+            "type": "FE", 
+            "connections": { 
+              "osaka": { "type": "ER" },
+              "tokyo": { "type": "ER" }
+            }
+          }
+        }
+      }
+    },
+    "color": "#00FF00"
+  },
+  {
+    "network_name": "NET1",
+    "job_name": "test4",
+    "routing": {
+      "tokyo": { "type": "DC", "connections": [] },
+      "osaka": { "type": "TZ", "connections": [] },
+      "los angeles": { "type": "LZ", "connections": [] },
+      "paris": { 
+        "type": "INT", 
+        "connections": {
+          "miami": { 
+            "type": "FE", 
+            "connections": {
+              "chicago": { "type": "ER" }, 
+              "san jose": { "type": "ER" }
+            }
+          },
+          "houston": { 
+            "type": "FE", 
+            "connections": { 
+              "portland": { "type": "ER" },
+              "vancouver": { "type": "ER" }
+            }
+          }
+        }
+      }
+    },
+    "color": "#ebcc34"
+  },
+  {
+    "network_name": "NET2",
+    "job_name": "test2",
+    "routing": {
+      "sydney": { "type": "DC", "connections": [] },
+      "brisbane": { "type": "TZ", "connections": [] },
+      "jakarta": { "type": "LZ", "connections": [] },
+      "kuala lumpur": { 
+        "type": "INT", 
+        "connections": {
+          "hanoi": { 
+            "type": "FE", 
+            "connections": {
+              "bangkok": { "type": "ER" }, 
+              "hong kong": { "type": "ER" }
+            }
+          },
+          "taipei": { 
+            "type": "FE", 
+            "connections": { 
+              "shanghai": { "type": "ER" },
+              "seoul": { "type": "ER" }
+            }
+          }
+        }
+      }
+    },
+    "color": "#FF0000"
+  },
+  {
+    "network_name": "NET2",
+    "job_name": "test3",
+    "routing": {
+      "melbourne": { "type": "DC", "connections": [] },
+      "sydney": { "type": "TZ", "connections": [] },
+      "san jose": { "type": "LZ", "connections": [] },
+      "Ho Chi Minh City": { 
+        "type": "INT", 
+        "connections": {
+          "santiago": { 
+            "type": "FE", 
+            "connections": {
+              "dubai": { "type": "ER" }, 
+              "muscat": { "type": "ER" },
+              "cape town": { "type": "ER" }
+            }
+          },
+          "chennai": { 
+            "type": "FE", 
+            "connections": { 
+              "nairobi": { "type": "ER" },
+              "berlin": { "type": "ER" }
+            }
+          }
+        }
+      }
+    },
+    "color": "#4287f5"
+  }
+]

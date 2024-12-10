@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#map {
+    width: 100%;
+    height: 100vh;
+}
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transform: translateX(100%); /* Fully off-screen */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0; /* Invisible by default */
+    overflow-y: auto;
+    padding: 20px;
+    visibility: hidden; /* Prevent interaction when hidden */
+}
+.sidebar.active {
+    transform: translateX(0); /* Slide in */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Allow interaction */
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+}
+.sidebar h3 {
+    margin-top: 0;
+}
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+#sidebar {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+	border-radius: 20px;
+	padding: 20px 30px;
+}
+
+#sidebar2 {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+	border-radius: 20px;
+	padding: 20px 30px;
+}
+
+
+.route {
+	width: 250px;
+}
+.route h3 {
+	text-align: center;
+	padding: 20px 20px;
+	margin: 0;
+	transition: background-color 0.3s, color 0.3s;
+	--route-background: transparent;
+}
+/* Hover and Active states */
+.route h3:hover, .route.open h3 {
+    background: var(--route-background);
+    color: #070809 !important; /* Dark text */
+}
+.route ul {
+	padding: 0 10px;
+	list-style-type: none;
+}
+.route ul ul ul {
+	padding: 0;
+}
+.route li {
+    position: relative;
+    padding-left: 23px; /* Add space for the tree icon */
+}
+/* Add tree-style indicators */
+.route li:before {
+    content: "├─"; /* Default tree branch for all items */
+    position: absolute;
+    left: 0;
+    color: #999; /* Change color to match your design */
+}
+
+/* Add styles for the last item (to use └─) */
+.route li:last-child:before {
+    content: "└─"; /* Use the bottom branch for the last item */
+}
+
+.route img {
+  float: right;
+}
+.route strong {
+  font-weight: bold;
+}
+/* Style for the ul container */
+.route > ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Smooth transition for expanding */
+    transition: padding 0.3s ease-out;
+    margin: 0;
+}
+
+/* When expanded, allow the ul to be fully visible */
+.route > ul.open {
+    max-height: 500px; /* Adjust the max height as needed */
+    padding: 20px 0;
+    transition: padding 0.3s ease-out;
+}
